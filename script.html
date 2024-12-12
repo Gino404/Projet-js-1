@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+    <title>Shifumi td7</title>
+</head>
+<body>
+    <div class="first">
+        <h2>Selectionne ton personnage et ton pseudo.</h2>
+        <div class="selection">
+            <div class="select">
+                <button id="flareon">Choisir</button>
+            </div>
+            <div class="select">
+                <button id="jolteon">Choisir</button>
+            </div>
+            <div class="select">
+                <button id="vaporeon">Choisir</button>
+            </div>
+            <div class="select">
+                <button id="leafeon"">Choisir</button>
+            </div>
+        </div>
+        <form id="form" action="">
+        <div class="name">
+            <img class="avatar" src="assets/img/vierge pp.jpg" alt="photo selectionné">
+            <p>Veuillez rentrer un nom:</p>
+            <label for="pseudo"></label>
+            <input id="pseudo" name="pseudo" type="text">
+            <div class="error"></div>
+            <button class="form">Continuer</button>
+            </div>
+        </form>
+        <div class="selection2">
+            <div class="select">
+                <button id="espeon">Choisir</button>
+            </div>
+            <div class="select">
+                <button id="umbreon">Choisir</button>
+            </div>
+            <div class="select">
+                <button id="glaceon">Choisir</button>
+            </div>
+            <div class="select">
+                <button id="sylveon">Choisir</button>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+        <div class="rules">
+            <p class="first-p">Déroulement et règles du jeu « Shifumi Spécial Pokemon»</p>
+            <p>Le mécanisme du jeu « Shifumi Spécial Pokémon» est simple,</p>
+            <p>Vous serez mis dans une arène de jeu de carte pokemon. </p>
+            <p>Vous placerez une des trois cartes disponible et le robot en face fera de même.</p>
+            <p>Une fois selectionné vous pourrez appuyer sur combattre pour vous battre contre le robot .</p>
+            <p>La personne avec le pokemon qui à un type dominant gagne , en cas de même pokémon il y a égalité.</p>
+            <p>L'eau bat le feu , Le feu bat la plante et la plante bat l'eau</p>
+            <button class="next">Continuer</button>
+        </div>
+    </div>
+    <div class="gamepage">
+        <div class="score">
+            <div>
+            <div>
+                <p>Vous</p>
+                <p id="score-joueur">0</p>
+            </div>
+            <div>
+                <p>Ordinateur</p>
+                <p id="score-ordinateur">0</p>
+            </div>
+            </div>
+            <div id="reset">Recommencer</div>
+        </div>
+        
+        <div class="action">
+            <p id="message">A vous de jouer !</p>
+            <div id="next">Tour suivant</div>
+        </div>
+        <div class="cardgamepage">
+            <div class="ennemie">
+                <div>
+                    <img class="card" src="assets/img/carte pokemon dos.jpg" alt="dos pok">
+                </div>
+                <div>
+                    <img class="card" src="assets/img/carte pokemon dos.jpg" alt="dos pok">
+                </div>
+                <div>
+                    <img class="card" src="assets/img/carte pokemon dos.jpg" alt="dos pok">
+                </div>
+                </div>
+            <div class="ally" >
+                <div>
+                    <img class="card btn-joueur" id="litten" src="assets/img/flamiaou.png" alt="flamiaou">
+                </div>
+                <div>
+                    <img class="card btn-joueur" id="quaxly" src="assets/img/coiffeton.png" alt="coiffeton">
+                </div>
+                <div>
+                    <img class="card btn-joueur"  id="chespin" src="assets/img/marisson.png" alt="marisson">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
