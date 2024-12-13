@@ -134,117 +134,117 @@ const setSuccess = element => {
 
 
 
-// const jouerManche = (e) => {
-//     let choix = e.target.closest(".btn-joueur");
+const jouerManche = (e) => {
+    let choix = e.target.closest(".btn-joueur");
 
-//     btnJoueur.forEach((btn) => {
-//         btn.classList.add("desactivated");
-//         btn.removeEventListener("click", jouerManche);
-//     });
+    btnJoueur.forEach((btn) => {
+        btn.classList.add("desactivated");
+        btn.removeEventListener("click", jouerManche);
+    });
 
-//     choix.classList.remove("desactivated");
-//     choix.classList.add("active");
+    choix.classList.remove("desactivated");
+    choix.classList.add("active");
 
-//     let choixJoueur = choix.id;
+    let choixJoueur = choix.id;
 
-//     let choixOrdi = faireChoixOrdinateur();
+    let choixOrdi = faireChoixOrdinateur();
 
-//     verifierGagnant(choixJoueur, choixOrdi);
+    verifierGagnant(choixJoueur, choixOrdi);
 
-//     nextBtn.style.visibility = "visible";
-// };
+    nextBtn.style.visibility = "visible";
+};
 
-// const faireChoixOrdinateur = () => {
-//     // 0 = water
-//     // 1 = grass
-//     // 2 = fire
+const faireChoixOrdinateur = () => {
+    // 0 = water
+    // 1 = grass
+    // 2 = fire
 
-//     let nbAleatoire = Math.floor(Math.random() * 3);
+    let nbAleatoire = Math.floor(Math.random() * 3);
 
-//     switch (nbAleatoire) {
-//         case 0:
-//             litten.classList.add("active");
-//             return water;
-//         case 1:
-//             chespin.classList.add("active");
-//             return grass;
-//         default:
-//             quaxly.classList.add("active");
-//             return fire;
-//     }
-// };
-
-
+    switch (nbAleatoire) {
+        case 0:
+            litten.classList.add("active");
+            return water;
+        case 1:
+            chespin.classList.add("active");
+            return grass;
+        default:
+            quaxly.classList.add("active");
+            return fire;
+    }
+};
 
 
-// const water = "water";
-// const grass = "grass";
-// const fire = "fire";
 
-// const verifierGagnant = (choixJoueur, choixOrdi) => {
-//     if (choixJoueur == choixOrdi) {
-//         message.textContent = "Egalité !";
-//         return;
-//     }
 
-//     if (choixJoueur == water) {
-//         if (choixOrdi == grass) {
-//             return victoireOrdinateur();
-//         } else if (choixOrdi == fire) {
-//             return victoireJoueur();
-//         }
-//     }
+const water = "water";
+const grass = "grass";
+const fire = "fire";
 
-//     if (choixJoueur == grass) {
-//         if (choixOrdi == fire) {
-//             return victoireOrdinateur();
-//         } else if (choixOrdi == water) {
-//             return victoireJoueur();
-//         }
-//     }
+const verifierGagnant = (choixJoueur, choixOrdi) => {
+    if (choixJoueur == choixOrdi) {
+        message.textContent = "Egalité !";
+        return;
+    }
 
-//     if (choixJoueur == fire) {
-//         if (choixOrdi == water) {
-//             return victoireOrdinateur();
-//         } else if (choixOrdi == grass) {
-//             return victoireJoueur();
-//         }
-//     }
-// };
+    if (choixJoueur == water) {
+        if (choixOrdi == grass) {
+            return victoireOrdinateur();
+        } else if (choixOrdi == fire) {
+            return victoireJoueur();
+        }
+    }
 
-// const victoireOrdinateur = () => {
-//     message.textContent = "L'ordinateur gagne...";
-//     scoreOrdinateur.textContent++;
-// };
+    if (choixJoueur == grass) {
+        if (choixOrdi == fire) {
+            return victoireOrdinateur();
+        } else if (choixOrdi == water) {
+            return victoireJoueur();
+        }
+    }
 
-// const victoireJoueur = () => {
-//     message.textContent = "Vous gagnez ! :)";
-//     scoreJoueur.textContent++;
-// };
+    if (choixJoueur == fire) {
+        if (choixOrdi == water) {
+            return victoireOrdinateur();
+        } else if (choixOrdi == grass) {
+            return victoireJoueur();
+        }
+    }
+};
 
-// const preparerNouvelleManche = () => {
-//     btnJoueur.forEach((btn) => {
-//         btn.classList.remove("desactivated");
-//         btn.classList.remove("active");
-//         btn.addEventListener("click", jouerManche);
-//     });
+const victoireOrdinateur = () => {
+    message.textContent = "L'ordinateur gagne...";
+    scoreOrdinateur.textContent++;
+};
 
-//     nextBtn.style.visibility = "hidden";
+const victoireJoueur = () => {
+    message.textContent = "Vous gagnez ! :)";
+    scoreJoueur.textContent++;
+};
 
-//     litten.classList.remove("active");
-//     chespin.classList.remove("active");
-//     quaxly.classList.remove("active");
+const preparerNouvelleManche = () => {
+    btnJoueur.forEach((btn) => {
+        btn.classList.remove("desactivated");
+        btn.classList.remove("active");
+        btn.addEventListener("click", jouerManche);
+    });
 
-//     message.textContent = "A vous de jouer !";
-// };
+    nextBtn.style.visibility = "hidden";
 
-// resetBtn.addEventListener("click", () => {
-//     scoreJoueur.textContent = 0;
-//     scoreOrdinateur.textContent = 0;
+    litten.classList.remove("active");
+    chespin.classList.remove("active");
+    quaxly.classList.remove("active");
 
-//     preparerNouvelleManche();
-// });
+    message.textContent = "A vous de jouer !";
+};
 
-// nextBtn.addEventListener("click", preparerNouvelleManche);
+resetBtn.addEventListener("click", () => {
+    scoreJoueur.textContent = 0;
+    scoreOrdinateur.textContent = 0;
 
-// btnJoueur.forEach((btn) => btn.addEventListener("click", jouerManche));
+    preparerNouvelleManche();
+});
+
+nextBtn.addEventListener("click", preparerNouvelleManche);
+
+btnJoueur.forEach((btn) => btn.addEventListener("click", jouerManche));
