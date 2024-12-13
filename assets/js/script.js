@@ -232,9 +232,9 @@ resetBtn.addEventListener("click", () => {
     scoreJoueur.textContent = 0;
     scoreOrdinateur.textContent = 0;
 
-    preparerNouvelleManche();
-});
+//     preparerNouvelleManche();
+// });
 
-nextBtn.addEventListener("click", preparerNouvelleManche);
+// nextBtn.addEventListener("click", preparerNouvelleManche);
 
-btnJoueur.forEach((btn) => btn.addEventListener("click", jouerManche));
+// btnJoueur.forEach((btn) => btn.addEventListener("click", jouerManche));
