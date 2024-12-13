@@ -191,6 +191,15 @@ h2{
     cursor: pointer;
 }
 
+.rules-btn{
+    position: absolute;
+    width: 20vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-joueur.desactivated {
     cursor: default;
 }
