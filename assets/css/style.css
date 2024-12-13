@@ -190,3 +190,12 @@ h2{
     visibility: hidden;
     cursor: pointer;
 }
+
+.btn-joueur.desactivated {
+    cursor: default;
+}
+
+.btn-joueur.desactivated:hover,
+.btn-joueur.active {
+    color: inherit;
+}
