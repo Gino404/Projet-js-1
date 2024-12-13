@@ -192,6 +192,7 @@ h2{
 }
 
 .rules-btn{
+    z-index: 99;
     position: absolute;
     width: 20vh;
     height: 5vh;
